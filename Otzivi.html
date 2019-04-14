@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>  
+            <link rel="stylesheet" href="style-dop.css" type="text/css">
+            <script src="js/jquery.js"></script>
+            <link href="css/bootstrap.min.css" rel="stylesheet" >
+    </head>
+    
+    <body class="body">
+        <header class="footer" style="width:100%">
+                <div id="logo">
+                    <a href="index.php"><img src="2.png" style="width: 100%"/></a> 
+                </div>
+                
+                <div id="menu">
+                    <a href="O_Nas.html" style="margin-left:250px">О Нас</a>
+                    <a href="Otzivi.html" >Отзывы</a>
+                    <a href="Sponsori.html" >Спонсоры</a>
+
+                </div>
+                <div id="nomer">(0800) 750-705<br>
+                    (050) 442-21-50
+                </div>
+            </header>
+        <div class="otzivi">
+                <h1 align="center" style="margin-top: 0" class="text">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h1>
+            
+            <div id="otz1"><img src="22.jpg" style="width: 300px"><p><b>Владимир Осипенко</b><br><br><br>Летали весной от вашего агентства в Турцию. Очень довольны отелем, обслуживанием и вообще организацией поездки. Брали горящий тур, поэтому еще и денег сэкономили на всякую всячину. Спасибо вам!<br><br><b>Выбраное направление: Турция</b></p></div>
+            
+            <div id="otz2"><img src="23.jpg" style="width: 300px"><p><b>Анна Костенко</b><br><br><br>Спасибо!<br>Наша семья уже второй год летает в туры вашей компании. Осенью были в ГАЛОПОМПОЕВРОПЕ, планируем на следующий год слетать в Египет или Тунис. Еще не решили куда. Гостиницы мы выбираем не дорогие, но нужно сказать, что даже при небольших деньгах сервис отменный. Еще один плюс – это возможность вылететь из Днепра, без пересадок. Что очень удобно, если едишь с детьми.<br><br><b>Выбраное направление: Кипр</b></p></div>
+            
+            <div id="otz3"><img src="24.jpg" style="width: 300px"><p><b>Владимир и Наталья</b><br><br><br>Летом обратилась в туристическое агентство «Кто Куда» и осталась в полном восторге！Мне подобрали идеально соответствующий моим пожеланиям тур, проконсультировали и дали ценные советы как начинающему путешественнику 🙂Работа настоящих профессионалов！Отдельная благодарность консультанту Елене 😊 👍<br><br><b>Выбраное направление: Бали</b></p></div>
+            
+            <div id="otz4"><img src="25.jpg" style="width: 200px"><p><b>Сергей</b><br><br><br>Всё понравилось, захотелось еще путешествий!<br><br><b>Выбраное направление: Египет</b></p></div>
+
+        </div>
+        
+        <h1 align="center" style="margin-top: 0" class="text">ОСТАВИТЬ КОММЕНТАРИИ</h1>
+            <form id="form_send">
+           <input type="text" placeholder="Имя" name="name" id="name" style="border-right-width: 1px;width: 40%; height: 40px; border-radius: 15px; font-size: 15px; text-align: center; margin-left: 30%" size="50px"  ><br><br><br>
+           <input type="text" placeholder="Фамилия" name="firstname" id="firstname" style="border-right-width: 1px;width: 40%; height: 40px; border-radius: 15px; font-size: 15px; text-align: center; margin-left: 30%" size="50px"  ><br><br><br>
+           <input type="text" placeholder="Отзыв" name="comment" id="comment" style="border-right-width: 1px;width: 40%; height: 200px; border-radius: 15px; font-size: 15px; text-align: center; margin-left: 30%" size="50px" ><br><br><br>
+                <input type="hidden" value="comment" name="type">
+           <button type="button" id="btn_send" class="button-otz" >Отправить</button><br><br>
+            </form>
+        </br>
+        <h4 class="text-center"><p   style="display: inline-block" class="result_send"></p></h4>
+            <script>
+
+             
+
+                $(document).ready(function(){
+                
+                    $('#btn_send').on('click', function() {
+
+                    if($('#name').val() == '' || $('#firstname').val() == '' || $('#comment').val() == '' ){
+                        $('.result_send').html('<div class="alert alert-danger">Заполните все поля</div>');
+                        console.log('Error');
+                    }else{ 
+                        $.ajax({
+                           url: 'send.php',
+                           method: 'POST',
+                           data: $('#form_send').serialize(),
+                           success: function(){
+                            $('.result_send').html('<div class="alert alert-success "> Спасибо за отзыв!</div>');
+                               console.log('Success');
+                           } 
+                        });
+                    }
+                    });
+                
+                });
+                </script>
+
+    </body>
+
+
+
+</html>

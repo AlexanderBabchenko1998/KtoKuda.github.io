@@ -1,0 +1,198 @@
+.body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #1e90ff;
+}
+.footer
+{
+    position: relative;
+    width: 98%;
+    float: left;
+    padding: 1%;
+    background-color: darkblue;   
+}
+.footer #logo
+{
+    width: 20%;
+    float: left;
+}
+.footer #menu
+{
+    width: 55%;
+    float: left;
+}
+.footer #menu a
+{
+    margin-top: 2%;
+    text-decoration: none;
+    margin-right: 5%;
+    float: left;
+    font: 26px sans-serif;
+    font-family: Franklin Gothic Heavy; 
+    font-weight: bold;
+    text-shadow: 4px 4px 7px black, 0 0 1em white; 
+    color: whitesmoke;
+}
+.footer #nomer
+{
+    padding: 0.5%;
+    width: 20%;
+    float: left;
+    text-align: right;
+    font: 26px sans-serif;
+    font-family: Franklin Gothic Heavy; 
+    font-weight: bold;
+    text-shadow: 4px 4px 7px black, 0 0 1em white; 
+    color: burlywood;
+}
+.t1
+{   
+    margin-top: 0px;
+    text-align: center;
+    font: 50px sans-serif;
+    font-family: Franklin Gothic Heavy; 
+    font-weight: bold;
+    text-shadow: 4px 4px 7px black, 0 0 1em white; 
+    color: whitesmoke; 
+}
+.ul
+{
+    list-style-type: none;
+
+}
+.img
+{
+    width: 40%;
+    float: left;
+}
+.t2
+{
+    margin-left: 42%;
+    margin-right: 2%;
+    font: 1.75em sans-serif;
+    font-family: monospace; 
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black, 0 0 1em white; 
+    color: black;
+    
+}
+.button {
+  position: relative;
+  z-index: 1;
+  color: black;
+  font-size: 110%;
+  font-weight: 700;
+  text-decoration: none;
+  padding: .25em .5em;
+}
+.button:after {
+  content: "Заказать"; 
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  width: calc(100% + 7*(1em*90/135) - 2px*2*2); 
+  text-align: right;
+  color: #fff;
+  font-size: 90%;
+  padding: .25em .5em;
+  border-radius: 5px;
+  border: 2px solid darkblue;
+  -webkit-transform: skewX(-10deg);
+  transform: skewX(-10deg);
+  background: linear-gradient(darkblue, darkblue) no-repeat 100% 0;
+  background-size: calc(7*(1em*90/135) + .5em) 100%;
+  box-shadow: inset calc(-7*(1em*90/135) - .5em) 0 rgba(255,255,255,0);
+  transition: .3s;
+}
+.button:hover:after {
+  box-shadow: inset calc(-7*(1em*90/135) - .5em) 0 rgba(255,255,255,.2);
+}
+.button:active:after {
+  background-image: linear-gradient(darkblue, white);
+}
+
+.otzivi
+{
+    width: 90%;
+    margin: 5%;
+    float: left;
+    text-align: center;
+}
+.otzivi #otz1
+{
+    width: 300px;
+    float: left;
+    height: auto;
+    margin-left: 3%;
+}
+.otzivi #otz2
+{
+    width: 300px;
+    float: left;
+    height: auto;
+    margin-left: 3%;
+}
+.otzivi #otz3
+{
+    width: 300px;
+    float: left;
+    height: auto;
+    margin-left: 3%;
+}
+.otzivi #otz4
+{
+    width: 300px;
+    float: left;
+    height: auto;
+    margin-left: 3%;
+}
+.ostav-otz
+{
+    border-radius: 10px;
+    width: 50px;
+}
+.button-otz
+{
+    background-color: #1e90ff;
+    border-color: #1e90ff;
+    border-bottom: 0;
+    box-shadow: rgba(255,255,255,255) 0px 0px 50px;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 200px;
+    height: 40px;
+    margin-left: 43%;
+}
+.text
+{
+    margin-top: 10px;
+    text-align: center;
+    font: 50px sans-serif;
+    font-family: Franklin Gothic Heavy; 
+    font-weight: bold;
+    text-shadow: 4px 4px 7px black, 0 0 1em white; 
+    color: whitesmoke; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
